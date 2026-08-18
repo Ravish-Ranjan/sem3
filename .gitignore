@@ -6,3 +6,4 @@
 **/images/**/*.JPG
 **/images/**/*.JPEG
 
+*.out
