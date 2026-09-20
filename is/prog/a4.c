@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "a4.h"
 
 int extended_euclidean(int a, int b, int* x, int* y) {
     if (b == 0) {
@@ -106,22 +104,22 @@ char* multiplicative_decipher(const char* data, int key) {
     return multiplicative_cipher(data,(x%26 + 26)%26);
 }
 
-int main() {
-    char* data = "Hello, World! This is Ravish Ranjan in 2026: Cipher Test #1. Keep it Safe & Simple!";
-    int key = 75;
+// int main() {
+//     char* data = "Hello, World! This is Ravish Ranjan in 2026: Cipher Test #1. Keep it Safe & Simple!";
+//     int key = 75;
 
-    char* add_cipher = additive_cipher(data,key);
-    char* add_decipher = additive_decipher(add_cipher,key);
-    char* mul_cipher = multiplicative_cipher(data,key);
-    char* mul_decipher = multiplicative_decipher(mul_cipher,key);
+//     char* add_cipher = additive_cipher(data,key);
+//     char* add_decipher = additive_decipher(add_cipher,key);
+//     char* mul_cipher = multiplicative_cipher(data,key);
+//     char* mul_decipher = multiplicative_decipher(mul_cipher,key);
 
-    printf("\nData     : %s\n\n",data);
-    printf("Cipher   : %s\n",add_cipher);
-    printf("Decipher : %s\n",add_decipher);
-    printf("Is Same  : %s\n\n",strcmp(add_decipher,data) == 0? "Yes":"No");
+//     printf("\nData     : %s\n\n",data);
+//     printf("Cipher   : %s\n",add_cipher);
+//     printf("Decipher : %s\n",add_decipher);
+//     printf("Is Same  : %s\n\n",strcmp(add_decipher,data) == 0? "Yes":"No");
 
-    printf("Cipher   : %s\n",mul_cipher);
-    printf("Decipher : %s\n",mul_decipher);
-    printf("Is Same  : %s\n\n",strcmp(mul_decipher,data) == 0?"Yes":"No");
-    return 0;
-}
+//     printf("Cipher   : %s\n",mul_cipher);
+//     printf("Decipher : %s\n",mul_decipher);
+//     printf("Is Same  : %s\n\n",strcmp(mul_decipher,data) == 0?"Yes":"No");
+//     return 0;
+// }
